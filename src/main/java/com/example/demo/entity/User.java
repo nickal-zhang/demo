@@ -5,8 +5,10 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -50,7 +52,8 @@ public class User implements Serializable {
     /**
      * 密码设置日期
      */
-    private LocalDateTime passwordDate;
+    @DateTimeFormat
+    private Date passwordDate;
 
     /**
      * 地址
@@ -60,7 +63,8 @@ public class User implements Serializable {
     /**
      * 生日
      */
-    private LocalDateTime birthday;
+    @DateTimeFormat
+    private Date birthday;
 
     /**
      * 性别
@@ -95,7 +99,8 @@ public class User implements Serializable {
     /**
      * 入职时间
      */
-    private LocalDateTime joinDate;
+    @DateTimeFormat
+    private Date joinDate;
 
     /**
      * 创建人id
@@ -111,13 +116,15 @@ public class User implements Serializable {
      * 创建时间
      */
     @TableField(fill = FieldFill.INSERT)
-    private LocalDateTime createTime;
+    @DateTimeFormat
+    private Date createTime;
 
     /**
      * 更新时间
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private LocalDateTime updateTime;
+    @DateTimeFormat
+    private Date updateTime;
 
     /**
      * 创建人姓名
@@ -156,6 +163,7 @@ public class User implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getAccount() {
         return account;
     }
@@ -163,6 +171,7 @@ public class User implements Serializable {
     public void setAccount(String account) {
         this.account = account;
     }
+
     public String getName() {
         return name;
     }
@@ -170,6 +179,7 @@ public class User implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
     public String getNickName() {
         return nickName;
     }
@@ -177,6 +187,7 @@ public class User implements Serializable {
     public void setNickName(String nickName) {
         this.nickName = nickName;
     }
+
     public String getPassword() {
         return password;
     }
@@ -184,13 +195,15 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-    public LocalDateTime getPasswordDate() {
+
+    public Date getPasswordDate() {
         return passwordDate;
     }
 
-    public void setPasswordDate(LocalDateTime passwordDate) {
+    public void setPasswordDate(Date passwordDate) {
         this.passwordDate = passwordDate;
     }
+
     public String getAddress() {
         return address;
     }
@@ -198,13 +211,15 @@ public class User implements Serializable {
     public void setAddress(String address) {
         this.address = address;
     }
-    public LocalDateTime getBirthday() {
+
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDateTime birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
+
     public String getSex() {
         return sex;
     }
@@ -212,6 +227,7 @@ public class User implements Serializable {
     public void setSex(String sex) {
         this.sex = sex;
     }
+
     public String getMobile() {
         return mobile;
     }
@@ -219,6 +235,7 @@ public class User implements Serializable {
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
+
     public String getEmail() {
         return email;
     }
@@ -226,6 +243,7 @@ public class User implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
     public String getComment() {
         return comment;
     }
@@ -233,6 +251,7 @@ public class User implements Serializable {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
     public String getPicture() {
         return picture;
     }
@@ -240,6 +259,7 @@ public class User implements Serializable {
     public void setPicture(String picture) {
         this.picture = picture;
     }
+
     public Long getOrgId() {
         return orgId;
     }
@@ -247,13 +267,15 @@ public class User implements Serializable {
     public void setOrgId(Long orgId) {
         this.orgId = orgId;
     }
-    public LocalDateTime getJoinDate() {
+
+    public Date getJoinDate() {
         return joinDate;
     }
 
-    public void setJoinDate(LocalDateTime joinDate) {
+    public void setJoinDate(Date joinDate) {
         this.joinDate = joinDate;
     }
+
     public Long getCreateId() {
         return createId;
     }
@@ -261,6 +283,7 @@ public class User implements Serializable {
     public void setCreateId(Long createId) {
         this.createId = createId;
     }
+
     public Long getUpdateId() {
         return updateId;
     }
@@ -268,20 +291,23 @@ public class User implements Serializable {
     public void setUpdateId(Long updateId) {
         this.updateId = updateId;
     }
-    public LocalDateTime getCreateTime() {
+
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(LocalDateTime createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
-    public LocalDateTime getUpdateTime() {
+
+    public Date getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(LocalDateTime updateTime) {
+    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
     public String getCreateName() {
         return createName;
     }
@@ -289,6 +315,7 @@ public class User implements Serializable {
     public void setCreateName(String createName) {
         this.createName = createName;
     }
+
     public String getUpdateName() {
         return updateName;
     }
@@ -296,6 +323,7 @@ public class User implements Serializable {
     public void setUpdateName(String updateName) {
         this.updateName = updateName;
     }
+
     public Boolean getIsDeleted() {
         return isDeleted;
     }
@@ -303,6 +331,7 @@ public class User implements Serializable {
     public void setIsDeleted(Boolean isDeleted) {
         this.isDeleted = isDeleted;
     }
+
     public Integer getStatus() {
         return status;
     }
@@ -310,6 +339,7 @@ public class User implements Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
     public Integer getFailNum() {
         return failNum;
     }
@@ -317,6 +347,7 @@ public class User implements Serializable {
     public void setFailNum(Integer failNum) {
         this.failNum = failNum;
     }
+
     public String getIdcardNumber() {
         return idcardNumber;
     }
@@ -328,31 +359,31 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-            "id=" + id +
-            ", account=" + account +
-            ", name=" + name +
-            ", nickName=" + nickName +
-            ", password=" + password +
-            ", passwordDate=" + passwordDate +
-            ", address=" + address +
-            ", birthday=" + birthday +
-            ", sex=" + sex +
-            ", mobile=" + mobile +
-            ", email=" + email +
-            ", comment=" + comment +
-            ", picture=" + picture +
-            ", orgId=" + orgId +
-            ", joinDate=" + joinDate +
-            ", createId=" + createId +
-            ", updateId=" + updateId +
-            ", createTime=" + createTime +
-            ", updateTime=" + updateTime +
-            ", createName=" + createName +
-            ", updateName=" + updateName +
-            ", isDeleted=" + isDeleted +
-            ", status=" + status +
-            ", failNum=" + failNum +
-            ", idcardNumber=" + idcardNumber +
-        "}";
+                "id=" + id +
+                ", account=" + account +
+                ", name=" + name +
+                ", nickName=" + nickName +
+                ", password=" + password +
+                ", passwordDate=" + passwordDate +
+                ", address=" + address +
+                ", birthday=" + birthday +
+                ", sex=" + sex +
+                ", mobile=" + mobile +
+                ", email=" + email +
+                ", comment=" + comment +
+                ", picture=" + picture +
+                ", orgId=" + orgId +
+                ", joinDate=" + joinDate +
+                ", createId=" + createId +
+                ", updateId=" + updateId +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", createName=" + createName +
+                ", updateName=" + updateName +
+                ", isDeleted=" + isDeleted +
+                ", status=" + status +
+                ", failNum=" + failNum +
+                ", idcardNumber=" + idcardNumber +
+                "}";
     }
 }
